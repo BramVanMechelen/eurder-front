@@ -1,0 +1,52 @@
+<form class = container>
+  <h2>Add Customer</h2>
+<div>
+  <div class="form-group">
+    <label>
+      <input #firstname class="form-control" placeholder="first name"/>
+    </label>
+    <label>
+      <input #lastname class="form-control" placeholder="last name"/>
+    </label>
+  </div>
+  <div class="form-group">
+    <label>
+      <input #complete class="form-control" placeholder="complete"/>
+    </label>
+    <label>
+      <input #domain class="form-control" placeholder="domain"/>
+    </label>
+    <label>
+      <input #localpart class="form-control" placeholder="local"/>
+    </label>
+  </div>
+  <div class="form-group">
+    <label>
+      <input #countryCallingCode class="form-control" placeholder="country callingcode"/>
+    </label>
+    <label>
+      <input #number class="form-control" placeholder="phonenumber"/>
+    </label>
+  </div>
+  <div class="form-group">
+    <label>
+      <input #streetName class="form-control" placeholder="street name"/>
+    </label>
+    <label>
+      <input #houseNumber class="form-control" placeholder="house number"/>
+    </label>
+    <label>
+      <input #postalCode class="form-control" placeholder="postalcode"/>
+    </label>
+    <label>
+      <input #country class="form-control" placeholder="country"/>
+    </label>
+  </div>
+</div>
+<div>
+  <button class="btn btn-primary"
+    (click)="addCustomer(firstname.value, lastname.value, complete.value, domain.value, localpart.value, countryCallingCode.value, number.value, streetName.value,houseNumber.value, postalCode.value, country.value )">
+    save
+  </button>
+</div>
+</form>

@@ -1,0 +1,25 @@
+
+<div class="container">
+
+  <h2>Items</h2>
+  <input [(ngModel)]="searchText" placeholder="search text goes here"  class="form-control">
+
+  <div class="itemlist">
+    <div class="card text-justify"  *ngFor="let item of items | filter: searchText" routerLink="/detail/{{item.id}}" (click)="onSelect(item)"  style="width: 250px; margin:5px">
+      <a routerLink="/items/{{item.id}}">
+      <div class="row-lg-4">
+        <div>
+          <img class="card-img-top" src="http://creativewings.be/wp-content/uploads/2020/03/placeholder.png" alt="">
+        </div>
+        <div class="card-text ml-2">{{item.name}}</div>
+        <div class="card-text ml-2 float-left mb-1">Price: €{{item.price}}</div>
+        <div [style.color]="stockColor(item)" class="card-text text-right mr-2 float-right mb-1" style="float: right"
+            >{{trimStock(item.stockUrgency)}}</div>
+      </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+

@@ -1,0 +1,27 @@
+.addItemBox {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-group{
+  margin-right: 5%;
+  width: 30%;
+}
+
+input {
+  width: 150%;
+}
+
+form {
+  margin-bottom: 40px;
+}
+
+.error_message {
+  color: red;
+}
+
+textarea {
+  width: 165%;
+}
+
+

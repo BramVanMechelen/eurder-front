@@ -1,0 +1,30 @@
+<!--<div class="container">-->
+<!--  <button class="btn btn-outline-dark" (click)="goBack()">go back</button>-->
+<!--</div>-->
+<div *ngIf='item' class="container d-flex">
+  <div class="container">
+    <h2>Name: <span>{{item.name}}</span></h2>
+    <h2>Description: <span>{{item.description}}</span></h2>
+    <h2>Stock amount: <span>{{item.amountOfStock}}</span></h2>
+    <h2>Price: <span>{{item.price}}</span></h2>
+    <h2>Stock urgency: <span>{{item.stockUrgency}}</span></h2>
+  </div>
+  <div class="container">
+    <label>
+      <input class="form-control mt-1" [(ngModel)]="item.name"/>
+    </label><br>
+    <label>
+      <input class="form-control mt-1" [(ngModel)]="item.description"/>
+    </label><br>
+    <label>
+      <input class="form-control mt-1" [(ngModel)]="item.amountOfStock"/>
+    </label><br>
+    <label>
+      <input class="form-control mt-1" [(ngModel)]="item.price"/>
+    </label><br>
+    <h2>Stock urgency: {{item.stockUrgency}}</h2>
+    <button (click)="save()">save</button>
+  </div>
+</div>
+
+

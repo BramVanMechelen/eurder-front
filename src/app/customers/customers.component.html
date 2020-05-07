@@ -1,0 +1,15 @@
+<div class="d-flex flex-wrap container">
+<div *ngFor="let customer of customers" class="container p-2 w-50 border border border-secondary">
+  <p>{{customer.firstname}}</p>
+  <p>{{customer.lastname}}</p>
+  <p>{{customer.address.streetName}}</p>
+  <p>{{customer.address.houseNumber}}</p>
+  <p>{{customer.address.postalCode}}</p>
+  <p>{{customer.address.country}}</p>
+  <p>{{customer.phoneNumber.countryCallingCode}}</p>
+  <p>{{customer.phoneNumber.number}}</p>
+  <p>{{customer.email.localPart}}</p>
+  <p>{{customer.email.domain}}</p>
+  <p>{{customer.email.complete}}</p>
+</div>
+</div>

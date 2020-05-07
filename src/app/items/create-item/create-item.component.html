@@ -1,0 +1,32 @@
+<form class="container">
+  <h2>Add Item</h2>
+  <div class="addItemBox">
+    <div class="form-group" >
+      <label for="itemName">Item name:
+        <input #itemName id="itemName" class="form-control" autocomplete="off">
+      </label>
+    </div>
+    <div class="form-group">
+      <label label="inputDescription" >Item description:
+        <textarea name="description" [(ngModel)]="itemDescription.value" #itemDescription class="form-control" required maxlength="255" rows="1" autocomplete="off"  ></textarea>
+        <p >{{255-itemDescription.value.length}}/255</p>
+      </label>
+    </div>
+    <div class="form-group">
+      <label for="itemAmount">Item amount:
+        <input #itemAmount id="itemAmount" class="form-control" required type="number" autocomplete="off">
+      </label>
+      <p class="error_message" *ngIf="itemAmount.value < 0">Amount can't be negative</p>
+    </div>
+    <div class="form-group">
+      <label for="itemPrice">Item price:
+        <input #itemPrice id="itemPrice" class="form-control" required type="number" autocomplete="off">
+      </label>
+      <p class="error_message" *ngIf="itemPrice.value < 0">Price can't be negative</p>
+    </div>
+  </div>
+  <button (click)="addItem(itemName.value, itemDescription.value, +itemAmount.value, +itemPrice.value);
+   itemName.value=''" class="btn btn-primary">
+    add
+  </button>
+</form>
