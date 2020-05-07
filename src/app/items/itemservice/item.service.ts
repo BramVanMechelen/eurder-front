@@ -13,7 +13,7 @@ export class ItemService {
     headers: new HttpHeaders({'Content-Type': 'application/json'})
   };
 
-  private itemUrl = 'http://localhost:9000/items/';
+  private itemUrl = 'https://eurder-back.herokuapp.com/items/';
   public errorMessage: string;
 
   constructor(private http: HttpClient) {

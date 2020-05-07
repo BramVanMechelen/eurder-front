@@ -14,7 +14,7 @@ export class CustomerService {
     headers: new HttpHeaders({'Content-Type': 'application/json'})
   };
 
-  private customerUrl = 'http://localhost:9000/customers/';
+  private customerUrl = 'https://eurder-back.herokuapp.com/customers/';
 
   constructor(private http: HttpClient) {
   }
