@@ -16,7 +16,7 @@ exports.config = {
     browserName: 'chrome'
   },
   directConnect: true,
-  baseUrl: 'https://eurder-back.herokuapp.com/',
+  baseUrl: 'https://eurder-front.herokuapp.com/items',
   framework: 'jasmine',
   jasmineNodeOpts: {
     showColors: true,
